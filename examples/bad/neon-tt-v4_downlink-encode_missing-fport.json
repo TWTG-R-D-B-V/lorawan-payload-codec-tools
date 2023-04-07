@@ -1,0 +1,27 @@
+[
+    {
+        "description": "NEON TT v4 Sensor config message",
+        "type": "downlink-encode",
+        "input": {
+            "data": {
+                "config_update_req": {
+                    "config_type": "sensor",
+                    "protocol_version": 4,
+                    "tag": "0x00000001",
+                    "payload": {
+                        "device_type": "tt",
+                        "sensor_type": "K",
+                        "switch_mask": {
+                            "selection": "avg_only"
+                        },
+                        "measurement_interval_minutes": 5,
+                        "periodic_event_message_interval": 12
+                    }
+                }
+            }
+        },
+        "output": {
+            "bytes": "4301000000040203050c00"
+        }
+    }
+]

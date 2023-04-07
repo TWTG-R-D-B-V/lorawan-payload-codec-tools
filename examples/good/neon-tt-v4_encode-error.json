@@ -1,0 +1,36 @@
+[
+    {
+        "description": "NEON TT v4 Invalid message type error",
+        "type": "downlink-encode",
+        "input": {
+            "data": {
+                "header": {
+                    "message_type": 0,
+                    "protocol_version": 3
+                },
+                "switch_mask": {
+                    "enable_confirmed_event_message": false
+                },
+                "communication_max_retries": 1,
+                "number_of_unconfirmed_messages": 1,
+                "periodic_message_random_delay_seconds": 0,
+                "status_message_interval_seconds": 60,
+                "status_message_confirmed_interval": 0,
+                "lora_failure_holdoff_count": 0,
+                "lora_system_recover_count": 0,
+                "lorawan_fsb_mask": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "output": {
+            "errors": [
+                "Invalid message type!"
+            ]
+        }
+    }
+]

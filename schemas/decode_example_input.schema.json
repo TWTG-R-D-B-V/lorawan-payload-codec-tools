@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "/DecodeExampleInput",
+  "type": "object",
+  "required": ["fPort", "bytes", "recvTime"],
+  "additionalProperties": false,
+  "properties": {
+    "bytes": {
+      "description": "the uplink/downlink payload expressed in hexadecimal",
+      "type": "string"
+    },
+    "fPort": {
+      "description": "the uplink/downlink message LoRaWAN fPort",
+      "type": "number"
+    },
+    "recvTime": {
+      "description": "the uplink/downlink message time",
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

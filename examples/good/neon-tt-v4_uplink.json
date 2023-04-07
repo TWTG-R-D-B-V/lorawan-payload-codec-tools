@@ -1,0 +1,48 @@
+[
+    {
+        "description": "NEON TT v4 Boot message ",
+        "type": "uplink",
+        "input": {
+            "bytes": "4001",
+            "recvTime": "2020-08-02T20:00:00.000+05:00",
+            "fPort": 1
+        },
+        "output": {
+            "data": {
+                "boot": {
+                    "protocol_version": 4,
+                    "reboot_reason": {
+                        "major": "config update",
+                        "minor": ""
+                    }
+                }
+            }
+        }
+    },
+    {
+        "description": "NEON TT v4 Sensor event message",
+        "type": "uplink",
+        "input": {
+            "bytes": "43024a9cff",
+            "recvTime": "2020-08-02T20:00:00.000+05:00",
+            "fPort": 3
+        },
+        "output": {
+            "data": {
+                "sensor_event": {
+                    "protocol_version": 4,
+                    "selection": "max_only",
+                    "trigger": "periodic",
+                    "condition_0": 0,
+                    "condition_1": 1,
+                    "condition_2": 0,
+                    "condition_3": 1,
+                    "temperature": {
+                        "max": -10,
+                        "status": "OK"
+                    }
+                }
+            }
+        }
+    }
+]

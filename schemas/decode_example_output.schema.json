@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "/DecodeExampleOutput",
+  "type": "object",
+  "oneOf": [{ "required": ["data"] }, { "required": ["errors"] }],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "description": "The open JavaScript object representing the decoded payload when no error is encountered while decoding. required if success.",
+      "type": "object"
+    },
+    "errors": {
+      "description": "A list of error messages while decoding the provided payload. required if failed.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "description": "A list of warning messages that do not prevent the codec from decoding the payload. optional.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
